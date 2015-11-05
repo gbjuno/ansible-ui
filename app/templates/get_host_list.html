@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>IP地址</th>
+				<th>别名</th>
+				<th>描述</th>
+				<th>状态</th>
+				<th>启用</th>
+			</tr>
+		</thead>
+		{% if hosts !=  None %}
+		<tbody>
+			{% for host in hosts %}
+			<tr>
+				<td>{{ host.ip }}</td>
+				<td>{{ host.alias }}</td>
+				<td>{{ host.description }}</td>
+				<td>{{ host.status }}</td>
+				<td>{{ host.enabled }}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		{% endif %}
+	</table>
+</div>
+{% endblock %}

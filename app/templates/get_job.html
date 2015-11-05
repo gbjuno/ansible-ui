@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+	<table class="table table-striped">
+		<tr>
+			<th>IP地址</th>
+			<th>执行内容</th>
+			<th>状态</th>
+			<th>开始时间</th>
+			<th>结束时间</th>
+		</tr>
+		{% if job is not None %}
+		<tbody>
+			<tr>
+				<td>{{ job.host.ip }}</td>
+				<td>{{ job.content }}</td>
+				<td>{{ job.status }}</td>
+				<td>{{ job.exec_start }}</td>
+				<td>{{ job.exec_end}}}</td>
+			</tr>
+		</tbody>
+		{% endif %}
+	</table>
+</div>
+{% endblock %}

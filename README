@@ -1,0 +1,9 @@
+构造一个简单的ansible-ui界面.
+
+version 0.0.1
+1. 界面元素
+	a.机器列表      hosts   (id, ip, description)
+	b.jobs列表      jobs    (id, job_detail, job_comment, job_owner, host_id, exec_start, exec_end, status)
+	c.result列表    results (id, result, job_id, status)
+
+	
